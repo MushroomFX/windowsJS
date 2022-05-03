@@ -1,0 +1,36 @@
+body {
+    background: black;
+    margin: 0;
+  }
+  
+  .windowbar {
+    display: grid;
+    grid-template-columns: 47px 1fr 32px 46px 46px 46px;
+    grid-template-rows: 32px;
+    gap: 0em 0em;
+    grid-template-areas: ". . . . .";
+  }
+  .urlbar {
+    display: grid;
+    grid-template-columns: 144px 1fr 372px;
+    grid-template-rows: 39px;
+    gap: 0em 0em;
+    grid-template-areas: ". . . . .";
+  }
+  div {
+    background: red;
+    color: #fff;
+  }
+  div:nth-child(2n) {
+    background: blue;
+  }
+  div:nth-child(3n) {
+    background: green;
+  }
+  div:nth-child(4n) {
+    background: red;
+  }
+  div:nth-child(5n) {
+    background: blue;
+  }
+  
