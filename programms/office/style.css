@@ -1,0 +1,100 @@
+:root{
+    --ms_blue:#2b579a;
+    --ms_green:#1b6844;
+    --ms_orange:#c15028;
+    --ms_height:249px;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+  
+  #pbg{
+    background:var(--ms_green);
+    width:calc(var(--ms_height)*1.79494382);
+    height:var(--ms_height);
+    color:white;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  }
+  #mslogo{
+    transform:translate(20px,20px);
+  }
+  .logo{
+    background:white;
+    width:9px;
+    height:9px;
+    float:left;
+  }
+  #ms_logo1 {
+    position:absolute;
+    transform:translate(0px,10px);
+  }
+  #ms_logo2 {
+    position:absolute;
+    transform:translate(10px,10px);
+  }
+  #ms_logo3 {
+    position:absolute;
+    transform:translate(10px,0px);
+  }
+  #ms{
+    transform:translate(15px,0px);
+  }
+  
+  #-x{
+    float:right;
+    transform:translate(-15px,-10px);
+    font-family: 'Source Code Pro', monospace;
+    font-size:16px;
+  }
+  
+  #ms_content{
+  /*   background:black; */
+    text-align:center;
+    font-size:22px;
+    transform:translate(0px,37px);
+  }
+  #ms_name{
+    transform:translate(17px,0);
+  /*   background:green; */
+    left:50%;
+    width:calc(var(--ms_height)*1.79494382);
+    font-size:68px;
+  }
+  
+  #starting{
+    position:relative;
+    font-size:12px;
+    bottom:-175px;
+    transform:translate(20px,23px);
+  }
+  
+  .ms_anim_{
+    animation-name: ms_anim1;
+    animation-duration: .5s;
+  }
+  .ms_anim__{  
+    animation-name: ms_anim2;
+    animation-duration: 1.25s;
+  }
+  .ms_anim___{  
+    animation-name: ms_anim3;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes ms_anim1 {
+    from {
+      transform:translate(0px,20px);
+      opacity:0;
+    }
+  }
+  
+  @keyframes ms_anim2 {
+    from {
+      transform:translate(-100px,37px);
+      opacity:0;
+    }
+  }
+  
+  @keyframes ms_anim3 {
+    0% {opacity:0;}
+    25% {opacity:0;}
+  }
