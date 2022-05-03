@@ -1,49 +1,224 @@
-<div id="taskbar">
-    <div id="logo">
-      <img class="cc" id="winlogo" src="https://raw.githubusercontent.com/MushroomFX/html_src/main/Win_512x.png">
-    </div>
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://cdpn.io/pen/debug/KKmVraW?authentication_hash=vWkRwoaJjmvM -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
   
-    <div class="menu">
-      <input id="search" spellcheck="false" value=" 🔎︎ Type here to search"></input>
-       <div id="cortana">
-        <img class="cc" id="cortlogo" src="https://raw.githubusercontent.com/MushroomFX/html_src/main/Cort_512x2.png">
-      </div>
-       <div id="taskico">
-        <img onmouseover="hover(this);" onmouseout="unhover(this);" class="cc" id="tasklogo" src="https://raw.githubusercontent.com/MushroomFX/html_src/main/Taskico_20x_2.png">
-      </div>
-    </div>
   
-    <div id="icons">
-      <div class="icon">
-        <img src="https://raw.githubusercontent.com/MushroomFX/html_src/main/WINWORD_24x.png">
-      </div>
-      <div class="icon">
-        <img src="https://raw.githubusercontent.com/MushroomFX/html_src/main/EXCEL_24x.png">
-      </div>
-      <div class="icon">
-        <img src="https://raw.githubusercontent.com/MushroomFX/html_src/main/POWERPNT_24x.png">
-      </div>
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Windows</title>
+  
+  
+  
+  
+<style>
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+body{
+  background-image:url('https://raw.githubusercontent.com/MushroomFX/html_src/main/img0_3840x2160.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin:0;
+  overflow:hidden;
+}
+#taskbar{
+  position: absolute;
+  width:100%;
+  height:32px;
+  background:rgb(16 16 16 / 90%);
+  backdrop-filter:blur(5px);
+  color:#ffffff;
+  padding:8px;
+  bottom:0px;
+}
+#logo{}
+#search{
+  background:#ffffff;
+  width:340px;
+  height:44px;
+  margin-top:-8px;
+  border:1px solid gray;
+  padding-left:10px;
+  transform:translate(40px,-50%);
+}
+#search:focus{
+  width:336px;
+  height:40px;
+  border:3px solid #00b0f0;
+  outline: none;
+  padding-left:8px;
+}
+
+#search:hover{
+  width:336px;
+  height:40px;
+  border:3px solid darkgray;
+  outline: none;
+  padding-left:8px;
+}
+#search:focus:hover{
+  border:3px solid #00b0f0;
+}
+#winlogo{
+  height:20px;
+  transform:translate(-16%,-16%);
+  padding:14px;
+}
+#winlogo:hover{
+  background:rgba(255,255,255,.125);
+}
+
+.menu{
+  transform:translate(0%,-28px);
+}
+
+#cortlogo{
+  height:20px;
+  width:20px;
+  transform:translate(394px,-72px)
+}
+#tasklogo{
+  height:20px;
+  width:20px;
+  transform:translate(442px,-124px);
+/*   clip-path: polygon(0 35%, 100% 35%, 100% 100%, 0% 100%); */
+}
+#tasklogo:hover{
+  transform:translate(442px,-124px);
+  
+/*   clip-path: polygon(0 0%, 100% 0%, 100% 65%, 0% 65%); */
+
+}
+.cc{
+  filter: saturate(0) brightness(10);
+  padding:14px
+}
+.cc:hover{
+  filter:hue-rotate(0deg);
+  background:rgba(255,255,255,.125);
+}
+#icons{
+  transform:translate(482px,-108px);
+}
+.icon{
+  float:left;
+  padding:12px;
+  transform:translate(8px,-98px);
+}
+.icon:hover{
+  background:rgba(255,255,255,.125);
+}
+
+
+#pgfont{
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no">
+  <div id="taskbar">
+  <div id="logo">
+    <img class="cc" id="winlogo" src="files/Win_512x.png">
+  </div>
+
+  <div class="menu">
+    <input id="search" spellcheck="false" value=" 🔎︎ Type here to search">
+     <div id="cortana">
+      <img class="cc" id="cortlogo" src="files/Cort_512x2.png">
     </div>
-    
-    <div id="notes">
-      <div class="time">
-        <div id="time"></div>
-        <div id="date"></div>
-      </div>
-      <div id="arrow"></div>
+     <div id="taskico">
+      <img onmouseover="hover(this);" onmouseout="unhover(this);" class="cc" id="tasklogo" src="files/Taskico_20x_2.png">
     </div>
-    
+  </div>
+
+  <div id="icons">
+    <div class="icon">
+      <img src="files/WINWORD_24x.png">
+    </div>
+    <div class="icon">
+      <img src="files/EXCEL_24x.png">
+    </div>
+    <div class="icon">
+      <img src="files/POWERPNT_24x.png">
+    </div>
   </div>
   
-  <div id="programm">
-    
-    
-    
+  <div id="notes">
+    <div class="time">
+      <div id="time"></div>
+      <div id="date"></div>
+    </div>
+    <div id="arrow"></div>
   </div>
   
+</div>
+
+<div id="programm">
   
   
   
-  <div id="globvars">
-    <div id="searchvar"></div>
-  </div>
+</div>
+
+
+
+
+<div id="globvars">
+  <div id="searchvar"></div>
+</div>
+  
+  
+      <script id="rendered-js">
+var interval = setInterval(function () {
+  if (document.getElementById('search').value!=" 🔎︎ Type here to search") {
+    document.getElementById('searchvar').value="1";
+  } else {
+  }
+  
+var x = document.getElementById('searchvar').value;
+  if(x=='1'){
+    document.getElementById('searchvar').value="2";
+    document.getElementById('search').value=""
+  }else if (x=='0'){
+    document.getElementById('search').value=" 🔎︎ Type here to search"
+  }
+  
+}, 1);
+
+function hover(element) {
+  element.setAttribute('src', 'https://raw.githubusercontent.com/MushroomFX/html_src/main/Taskico_20x_1.png');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'https://raw.githubusercontent.com/MushroomFX/html_src/main/Taskico_20x_2.png');
+}
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>

@@ -7,6 +7,10 @@
   
   @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
   
+body{
+  margin:0
+}
+
   #pbg{
     background:var(--ms_green);
     width:calc(var(--ms_height)*1.79494382);
