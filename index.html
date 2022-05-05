@@ -213,6 +213,20 @@ function hover(element) {
 function unhover(element) {
   element.setAttribute('src', 'https://raw.githubusercontent.com/MushroomFX/html_src/main/Taskico_20x_2.png');
 }
+
+function open(programm,path,search){
+  if(localStorage.getItem(programm)=="true"){
+    document.getElementsByClassName(`${programm}_frame`)[0].remove()
+    localStorage.setItem(programm,"false")
+    return
+  }
+  localStorage.setItem(programm,"true")
+  document.getElementById('programms').innerHTML += `
+    <div class="${programm}_frame">
+      <iframe src="${path}${programm}${search}"></iframe>
+    </div>
+  `
+}
     </script>
 
   
