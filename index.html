@@ -224,10 +224,13 @@ function start(programm,path,search,size){
   }
   localStorage.setItem(programm,"true")
   document.getElementById('programms').innerHTML += `
-    <div class="${programm}_frame">
+    <div class="${programm}_frame frame">
       <iframe frameborder="0" src="${site}" style="width:${size[0]}px;height:${size[1]}px"></iframe>
     </div>
   `
+  for(i = 0; i < document.getElementsByClassName('frame').length; i++){
+    console.log(document.getElementsByClassName('frame')[i])
+  }
 }
     </script>
 
