@@ -129,7 +129,9 @@ body{
   font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 }
 iframe{
-  width:100vw;height:100vw;
+  /* width:100vw;height:100vw; */
+
+  position:absolute
 }
 </style>
 
@@ -152,13 +154,13 @@ iframe{
   </div>
 
   <div id="icons">
-    <div class="icon" onclick="start('word','/office/','?word')">
+    <div class="icon" onclick="start('word','/office/','?word',['482','266'])">
       <img src="files/WINWORD_24x.png">
     </div>
-    <div class="icon" onclick="start('excel','/office/','?excel')">
+    <div class="icon" onclick="start('excel','/office/','?excel',['482','266'])">
       <img src="files/EXCEL_24x.png">
     </div>
-    <div class="icon" onclick="start('pp','/office/','?pp')">
+    <div class="icon" onclick="start('pp','/office/','?pp',['482','266'])">
       <img src="files/POWERPNT_24x.png">
     </div>
   </div>
@@ -212,7 +214,7 @@ function unhover(element) {
   element.setAttribute('src', 'https://raw.githubusercontent.com/MushroomFX/html_src/main/Taskico_20x_2.png');
 }
 
-function start(programm,path,search){
+function start(programm,path,search,size){
   var site = `./programms${path}frame.html${search}`
   console.log(site,localStorage.getItem(programm))
   if(localStorage.getItem(programm)=="true"){
@@ -223,7 +225,7 @@ function start(programm,path,search){
   localStorage.setItem(programm,"true")
   document.getElementById('programms').innerHTML += `
     <div class="${programm}_frame">
-      <iframe frameborder="0" src="${site}"></iframe>
+      <iframe frameborder="0" src="${site}" style="width:${size[0]}px;height:${size[1]}px"></iframe>
     </div>
   `
 }
