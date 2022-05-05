@@ -229,8 +229,13 @@ function start(programm,path,search,size){
     </div>
   `
   for(i = 0; i < document.getElementsByClassName('frame').length; i++){
-    console.log(document.getElementsByClassName('frame')[i])
+    if(document.getElementsByClassName('frame')[i].value == undefined){
+      document.getElementsByClassName('frame')[i].value = 0
+    }
+    document.getElementsByClassName('frame')[i].value -= 1
+    document.getElementsByClassName('frame')[i].style.zIndex = document.getElementsByClassName('frame')[i].value
   }
+    document.getElementsByClassName(`${programm}_frame`).style.zIndex
 }
     </script>
 
