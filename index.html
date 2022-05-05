@@ -154,13 +154,13 @@ body{
   </div>
 
   <div id="icons">
-    <div class="icon" onclick="open('word')">
+    <div class="icon" onclick="start('word','/office/','?word')">
       <img src="files/WINWORD_24x.png">
     </div>
-    <div class="icon" onclick="open('excel')">
+    <div class="icon" onclick="start('excel','/office/','?excel')">
       <img src="files/EXCEL_24x.png">
     </div>
-    <div class="icon" onclick="open('pp')">
+    <div class="icon" onclick="start('pp','/office/','?pp')">
       <img src="files/POWERPNT_24x.png">
     </div>
   </div>
@@ -175,7 +175,7 @@ body{
   
 </div>
 
-<div id="programm">
+<div id="programms">
   
   
   
@@ -214,7 +214,9 @@ function unhover(element) {
   element.setAttribute('src', 'https://raw.githubusercontent.com/MushroomFX/html_src/main/Taskico_20x_2.png');
 }
 
-function open(programm,path,search){
+function start(programm,path,search){
+  var site = `./programms${path}frame.html${search}`
+  console.log(site,localStorage.getItem(programm))
   if(localStorage.getItem(programm)=="true"){
     document.getElementsByClassName(`${programm}_frame`)[0].remove()
     localStorage.setItem(programm,"false")
@@ -223,7 +225,7 @@ function open(programm,path,search){
   localStorage.setItem(programm,"true")
   document.getElementById('programms').innerHTML += `
     <div class="${programm}_frame">
-      <iframe src="${path}${programm}${search}"></iframe>
+      <iframe src="${site}"></iframe>
     </div>
   `
 }
@@ -231,7 +233,7 @@ function open(programm,path,search){
 
   
 
-
+<iframe src="./programms/office/starting.html" frameborder="0"></iframe>
 
 
  
