@@ -128,12 +128,10 @@ body{
 #pgfont{
   font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 }
+iframe{
+  width:100vw;height:100vw;
+}
 </style>
-
-  
-  
-  
-  
 
 </head>
 
@@ -218,22 +216,18 @@ function start(programm,path,search){
   var site = `./programms${path}frame.html${search}`
   console.log(site,localStorage.getItem(programm))
   if(localStorage.getItem(programm)=="true"){
-    document.getElementsByClassName(`${programm}_frame`)[0].remove()
     localStorage.setItem(programm,"false")
+    document.getElementsByClassName(`${programm}_frame`)[0].remove()
     return
   }
   localStorage.setItem(programm,"true")
   document.getElementById('programms').innerHTML += `
     <div class="${programm}_frame">
-      <iframe src="${site}"></iframe>
+      <iframe frameborder="0" src="${site}"></iframe>
     </div>
   `
 }
     </script>
-
-  
-
-<iframe src="./programms/office/starting.html" frameborder="0"></iframe>
 
 
  

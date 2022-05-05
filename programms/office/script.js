@@ -10,6 +10,8 @@ if(app=="?pp"){
 }
 
 function ms_anim() {
+  setTimeout(function(){
+    document.body.style.opacity = "1"
     var element_ = document.getElementById('mslogo');
     var element__ = document.getElementById('ms_content');
     var element___ = document.getElementById('ms_v');
@@ -23,4 +25,5 @@ function ms_anim() {
       element__.classList.remove("ms_anim__");
       element___.classList.remove("ms_anim___");
     },1500);
+  },10);
   }
